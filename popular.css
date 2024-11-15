@@ -1,0 +1,423 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("Poppins-Medium.ttf") format("truetype");
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+* {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+/* Style for navbar toggler */
+.navbar-toggler {
+  border: none; /* Remove the default border */
+  border-radius: 50px; /* Keep the pill shape */
+  padding: 0.5rem 1rem; /* Adjust padding for a rounded look */
+}
+
+/* Style for the menu icon inside the toggler */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2834, 34, 34, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Darker icon color */
+  filter: brightness(1.5); /* Make it stand out */
+}
+
+/* Optional: Adjust icon size if necessary */
+.navbar-toggler-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  padding: 1em 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #333;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+header {
+  padding: 10px 0px 0px 0px;
+}
+.nav-pills {
+  background-color: rgba(255, 255, 255, 0.7); /* Genomskinlig vit bakgrund */
+  padding: 0px 20px 0px 20px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 80px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  margin-top: 20px;
+}
+
+.nav-item.me-auto .nav-link {
+  margin-right: auto; /* Push "Home" to the far left */
+  display: flex;
+  align-items: center;
+}
+.Logotitle {
+  font-family: "Poppins-Medium";
+  color: #343a40;
+  font-size: 1.2rem;
+  margin-left: 8px; /* Adjust spacing between the image and text */
+}
+
+@media (max-width: 466px) {
+  .Logotitle {
+    margin-top: 0; /* Ensures no vertical shift */
+    display: inline-block; /* Keeps inline alignment */
+  }
+
+  .nav-item.me-auto .nav-link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-item.ms-auto {
+  margin-left: auto; /* Push "Börja Titta" to the far right */
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
+.nav-pills .nav-link {
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(200, 200, 200, 0.7); /* Darker hue of white on hover */
+  color: #343a40; /* Slightly darker text on hover for contrast */
+}
+
+.nav-pills .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #495057; /* White text for active state */
+}
+/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
+
+.nav-link {
+  border-radius: 50px; /* Gör varje knapp pill-formad */
+  color: #495057; /* Mörkgrå text */
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.hero-video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-family: "Poppins-Medium", sans-serif;
+  margin-top: 10px;
+  text-shadow: 3px 3px 5px rgb(0, 0, 0);
+  height: 50%;
+}
+
+.shadow-1-strong {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery layout */
+.gallery-row {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr); /* Five columns by default */
+  background: linear-gradient(to right, #b6692a, #501903, #6b2f09);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  /* Three items per row on medium and smaller screens (tablets and mobiles) */
+  .gallery-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  /* Two items per row on small screens (phones) */
+  .gallery-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gallery-column {
+  flex: 1 1 33%; /* Three equal columns */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Gallery image styling */
+.gallery-image {
+  /* aspect-ratio: 1 / 1;  */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive gallery layout */
+@media (min-width: 980px) {
+  /* On large screens, set columns to take less width to reduce image size */
+  .gallery-row .col-lg-4 {
+    flex: 1 1 30%; /* Make columns smaller to reduce image scale */
+  }
+}
+
+@media (max-width: 980px) {
+  .gallery-row .col-md-6 {
+    flex: 1 1 50%; /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 430px) {
+  .gallery-row .col-md-6 {
+    flex: 1 1 100%; /* Single column on small screens */
+  }
+}
+
+/* cards */
+
+.hover-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-image {
+  /* display: block;
+    width: 100%;
+    height: auto; */
+  transition: transform 0.3s ease;
+}
+
+.hover-card:hover .gallery-image {
+  transform: scale(1.1);
+  /* filter: brightness(70%); */
+}
+
+.hover-content {
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  /* opacity: 0; */
+  text-align: left;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease;
+}
+
+.hover-card:hover .hover-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hover-content p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 1000px) {
+  .hover-content {
+    font-size: 0.75rem; /* Smaller base font size */
+  }
+  .hover-content h3 {
+    font-size: 0.75rem; /* Further reduce title size */
+    text-align: left;
+  }
+  .hover-content p {
+    font-size: 0.55rem; /* Further reduce genre text size */
+  }
+}
+
+@media (max-width: 430px) {
+  .hover-content {
+    font-size: 0.5rem; /* Smaller base font size */
+    height: fit-content;
+  }
+}
+
+.movie-title {
+  font-family: "Poppins-Bold", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: left;
+}
+
+.movie-genre {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-align: right;
+}
+
+/* Style for when there are no movies to display */
+.no-movies-message {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #b6692a, #501903, #6b2f09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.no-movies-message p {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.star-icon {
+  font-size: 4rem;
+  padding-top: 50px;
+  cursor: pointer;
+  animation: bounce 1s infinite alternate; /* Continuous bounce */
+  transition: transform 0.5s ease;
+}
+
+/* Clicked jump animation */
+.star-icon.clicked {
+  animation: clickBounce 0.4s ease-out; /* Small jump when clicked */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes clickBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Small jump */
+  }
+  100% {
+    transform: translateY(0); /* Return to original spot */
+  }
+}

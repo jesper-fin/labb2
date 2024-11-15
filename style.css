@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("Poppins-Medium.ttf") format("truetype");
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+* {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  background: #333;
+  padding: 1em 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background: #333;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.nav-pills {
+  background-color: rgba(255, 255, 255, 0.7); /* Genomskinlig vit bakgrund */
+  padding: 10px 20px;
+  border-radius: 50px; /* Rundad behållare */
+  display: inline-flex; /* Gör att behållaren blir pill-formad */
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
+.nav-pills .nav-link {
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.nav-pills .nav-link:hover {
+  background-color: rgba(200, 200, 200, 0.7); /* Darker hue of white on hover */
+  color: #343a40; /* Slightly darker text on hover for contrast */
+}
+
+.nav-pills .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #495057; /* White text for active state */
+}
+/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
+
+.nav-link {
+  border-radius: 50px; /* Gör varje knapp pill-formad */
+  color: #495057; /* Mörkgrå text */
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.hero-video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  font-family: "Poppins-Medium", sans-serif;
+  margin-top: 10px;
+}
