@@ -9,7 +9,7 @@ const genreDropdownList = document.getElementById("genreDropdownList");
 let genreMap = {};
 let allMovies = []; // To store all movies after combining pages
 
-// Function to fetch genres
+// fetch genres
 async function fetchGenres() {
   try {
     const response = await fetch(GENRES_URL);
@@ -23,10 +23,9 @@ async function fetchGenres() {
   }
 }
 
-// Function to fetch popular movies from both pages
+// fetch popular movies from both pages
 async function fetchPopularMovies() {
   try {
-    // Fetch movies from page 1 and page 2
     const response1 = await fetch(API_URL);
     const response2 = await fetch(API_URL_PAGE_2);
 
@@ -42,11 +41,11 @@ async function fetchPopularMovies() {
   }
 }
 
-// Function to display movies in the gallery
+// display movies in the gallery
 function displayMoviesInGallery(movies) {
   galleryRow.innerHTML = ""; // Clear existing movies
 
-  // If no movies are found, display the "No Movies Available" message with the background
+  // If no movies are found, display the no Movies Available =C message with the background
   if (movies.length === 0) {
     const noMoviesMessage = document.createElement("div");
     noMoviesMessage.classList.add("no-movies-message");
@@ -59,7 +58,7 @@ function displayMoviesInGallery(movies) {
     return;
   }
 
-  // Loop through the movies and create a hover-card for each one
+  // loop through the movies and create a hover-card for each one
   movies.forEach((movie) => {
     const imagePath = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 
@@ -90,7 +89,7 @@ function displayMoviesInGallery(movies) {
   });
 }
 
-// Function to populate genres in the dropdown and add click event listeners
+// populate genres in the dropdown and add click event listeners
 async function populateGenreDropdown() {
   try {
     const response = await fetch(GENRES_URL);
@@ -101,7 +100,7 @@ async function populateGenreDropdown() {
       genreDropdownList.appendChild(genreItem);
     });
 
-    // Add click event listener to each genre item
+    // add click event listener to each genre item
     const genreItems = document.querySelectorAll(".dropdown-item");
     genreItems.forEach((item) => {
       item.addEventListener("click", handleGenreClick);
@@ -133,12 +132,12 @@ function sortMoviesByReleaseDate() {
   displayMoviesInGallery(sortedMovies); // Display the sorted movies
 }
 
-// Adding event listener to the "Popular" tab
+// Adding event listener to the "popular" tab
 document.getElementById("pills-popular-tab").addEventListener("click", () => {
   fetchPopularMovies(); // Fetch and display all popular movies (already sorted by popularity)
 });
 
-// Adding event listener to the "Latest" tab to sort by release date
+// Adding event listener to "latest" tab sort by release date
 document.getElementById("pills-rating-tab").addEventListener("click", () => {
   sortMoviesByReleaseDate(); // Sort and display movies based on release date
 });
@@ -149,22 +148,22 @@ document.querySelector(".star-icon").addEventListener("click", function () {
     starIcon.getAttribute("data-target")
   );
 
-  // Trigger the jump animation by adding and removing the "clicked" class
+  // Trigger jump animation by adding and removing "clicked" class
   starIcon.classList.add("clicked");
 
-  // Remove the "clicked" class after the animation completes
+  // remove the "clicked" class after animation complete
   setTimeout(() => {
     starIcon.classList.remove("clicked");
 
-    // Scroll to the target section smoothly, with the star "falling" down
+    // Scroll to target section smoothly with the star jumping
     targetSection.scrollIntoView({ behavior: "smooth" });
 
-    // After scrolling, make the star return to its original bouncing position
+    // After scrolling make the star return to its original position
     setTimeout(() => {
       starIcon.style.transition = "transform 0.5s ease";
       starIcon.style.transform = "translateY(0)";
-    }, 1000); // Adjust timing based on scroll speed
-  }, 400); // Adjust to match the length of the clickBounce animation (0.4s)
+    }, 1000);
+  }, 400);
 });
 
 // Initialize the page

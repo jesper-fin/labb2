@@ -27,20 +27,17 @@ body {
   text-align: center;
 }
 
-/* Style for navbar toggler */
 .navbar-toggler {
-  border: none; /* Remove the default border */
-  border-radius: 50px; /* Keep the pill shape */
-  padding: 0.5rem 1rem; /* Adjust padding for a rounded look */
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
 }
 
-/* Style for the menu icon inside the toggler */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2834, 34, 34, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Darker icon color */
-  filter: brightness(1.5); /* Make it stand out */
+  filter: brightness(1.5);
 }
 
-/* Optional: Adjust icon size if necessary */
 .navbar-toggler-icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -94,7 +91,7 @@ header {
   padding: 10px 0px 0px 0px;
 }
 .nav-pills {
-  background-color: rgba(255, 255, 255, 0.7); /* Genomskinlig vit bakgrund */
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 0px 20px 0px 20px;
   border-radius: 50px;
   display: flex;
@@ -108,7 +105,7 @@ header {
 }
 
 .nav-item.me-auto .nav-link {
-  margin-right: auto; /* Push "Home" to the far left */
+  margin-right: auto;
   display: flex;
   align-items: center;
 }
@@ -116,13 +113,13 @@ header {
   font-family: "Poppins-Medium";
   color: #343a40;
   font-size: 1.2rem;
-  margin-left: 8px; /* Adjust spacing between the image and text */
+  margin-left: 8px;
 }
 
 @media (max-width: 466px) {
   .Logotitle {
-    margin-top: 0; /* Ensures no vertical shift */
-    display: inline-block; /* Keeps inline alignment */
+    margin-top: 0;
+    display: inline-block;
   }
 
   .nav-item.me-auto .nav-link {
@@ -132,12 +129,11 @@ header {
 }
 
 .nav-item.ms-auto {
-  margin-left: auto; /* Push "Börja Titta" to the far right */
+  margin-left: auto;
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
 .nav-pills .nav-link {
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.3s ease;
   height: 100%;
   display: flex;
   align-items: center;
@@ -145,19 +141,18 @@ header {
 }
 
 .nav-pills .nav-link:hover {
-  background-color: rgba(200, 200, 200, 0.7); /* Darker hue of white on hover */
-  color: #343a40; /* Slightly darker text on hover for contrast */
+  background-color: rgba(200, 200, 200, 0.7);
+  color: #343a40;
 }
 
 .nav-pills .nav-link.active {
   background-color: rgba(255, 255, 255, 0.7);
-  color: #495057; /* White text for active state */
+  color: #495057;
 }
-/* <<<<<<<<<<<<<<<<<<<<<<--- changes ---> */
 
 .nav-link {
-  border-radius: 50px; /* Gör varje knapp pill-formad */
-  color: #495057; /* Mörkgrå text */
+  border-radius: 50px;
+  color: #495057;
 }
 
 .tab-content {
@@ -175,7 +170,7 @@ footer {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-video {
@@ -218,11 +213,10 @@ footer {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Gallery layout */
 .gallery-row {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(5, 1fr); /* Five columns by default */
+  grid-template-columns: repeat(5, 1fr);
   background: linear-gradient(to right, #b6692a, #501903, #6b2f09);
   margin-top: 2rem;
   padding: 2rem;
@@ -230,14 +224,12 @@ footer {
 }
 
 @media (max-width: 720px) {
-  /* Three items per row on medium and smaller screens (tablets and mobiles) */
   .gallery-row {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 400px) {
-  /* Two items per row on small screens (phones) */
   .gallery-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -250,36 +242,30 @@ footer {
   gap: 1rem;
 }
 
-/* Gallery image styling */
 .gallery-image {
-  /* aspect-ratio: 1 / 1;  */
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive gallery layout */
 @media (min-width: 980px) {
-  /* On large screens, set columns to take less width to reduce image size */
   .gallery-row .col-lg-4 {
-    flex: 1 1 30%; /* Make columns smaller to reduce image scale */
+    flex: 1 1 30%;
   }
 }
 
 @media (max-width: 980px) {
   .gallery-row .col-md-6 {
-    flex: 1 1 50%; /* Two columns on medium screens */
+    flex: 1 1 50%;
   }
 }
 
 @media (max-width: 430px) {
   .gallery-row .col-md-6 {
-    flex: 1 1 100%; /* Single column on small screens */
+    flex: 1 1 100%;
   }
 }
-
-/* cards */
 
 .hover-card {
   position: relative;
@@ -288,20 +274,15 @@ footer {
 }
 
 .gallery-image {
-  /* display: block;
-  width: 100%;
-  height: auto; */
   transition: transform 0.3s ease;
 }
 
 .hover-card:hover .gallery-image {
   transform: scale(1.1);
-  /* filter: brightness(70%); */
 }
 
 .hover-content {
   position: absolute;
-  /* top: 0; */
   left: 0;
   right: 0;
   bottom: 0;
@@ -311,7 +292,6 @@ footer {
   padding: 10px;
   color: white;
   background: rgba(0, 0, 0, 0.7);
-  /* opacity: 0; */
   text-align: left;
   transform: translateY(100%);
   transition: opacity 0.3s ease;
@@ -335,20 +315,20 @@ footer {
 
 @media (max-width: 1000px) {
   .hover-content {
-    font-size: 0.75rem; /* Smaller base font size */
+    font-size: 0.75rem; /* smol base font size */
   }
   .hover-content h3 {
-    font-size: 0.75rem; /* Further reduce title size */
+    font-size: 0.75rem; /* reduce title size */
     text-align: left;
   }
   .hover-content p {
-    font-size: 0.55rem; /* Further reduce genre text size */
+    font-size: 0.55rem;
   }
 }
 
 @media (max-width: 430px) {
   .hover-content {
-    font-size: 0.5rem; /* Smaller base font size */
+    font-size: 0.5rem;
     height: fit-content;
   }
 }
@@ -367,7 +347,6 @@ footer {
   text-align: right;
 }
 
-/* Style for when there are no movies to display */
 .no-movies-message {
   width: 100%;
   height: 100%;
@@ -391,13 +370,12 @@ footer {
 .star-icon {
   font-size: 4rem;
   cursor: pointer;
-  animation: bounce 1s infinite alternate; /* Continuous bounce */
+  animation: bounce 1s infinite alternate;
   transition: transform 0.5s ease;
 }
 
-/* Clicked jump animation */
 .star-icon.clicked {
-  animation: clickBounce 0.4s ease-out; /* Small jump when clicked */
+  animation: clickBounce 0.4s ease-out;
 }
 
 @keyframes bounce {
@@ -414,9 +392,9 @@ footer {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px); /* Small jump */
+    transform: translateY(-20px);
   }
   100% {
-    transform: translateY(0); /* Return to original spot */
+    transform: translateY(0);
   }
 }
